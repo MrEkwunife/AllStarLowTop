@@ -1,0 +1,159 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+/* PARENT CONTAINERS */
+article{
+  width: 825px;
+  margin: 50px auto;
+  border: 5px solid black;
+  /* display: inline-block; */
+}
+
+.prod-cont{
+  display: flex;
+  align-items: flex-start;
+  /* justify-content: space-between; */
+  gap: 40px;
+}
+
+
+.prod-details{
+  flex: 1;
+}
+
+.prod-info{
+  flex: 1;
+}
+
+.priceXshipping{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.colors{
+  display: flex;
+  gap: 10px;
+}
+
+/* Child Elements */
+
+
+.content-title{
+  text-align: center;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  position: relative;
+}
+
+.content-title::before{
+  content: 'sale';
+  text-transform: uppercase;
+  position: absolute;
+  top: -20px;
+  left: -40px;
+  font-size: 14px;
+  background-color: red;
+  padding: 7px 14px;
+  letter-spacing: 5px;
+  color: white;
+}
+
+.price{
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.shipping{
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777;
+  font-weight: bold;
+}
+
+.description{
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.more-info:link, .more-info:visited{
+  color: black;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.more-info:hover, .more-info:active{
+  color: tomato;
+  text-decoration: none;
+}
+
+.color{
+  height: 22px;
+  width: 22px;
+  background: black;
+}
+
+.color-blue{
+  background: blue;
+}
+
+.color-red{
+  background: red;
+}
+
+.color-yellow{
+  background: yellow;
+}
+
+.color-green{
+  background: green;
+}
+
+.color-brown{
+  background: brown;
+}
+
+.det-header{
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.det-list{
+  list-style-type: square;
+}
+
+.det-list li{
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.add-cart{
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  font-size: 23px;
+  background: black;
+  color: white;
+  padding: 15px;
+  border: 0;
+}
+
+.add-cart:hover{
+  color: black;
+  background-color: white;
+  border-top: 5px solid black;
+}
