@@ -3,49 +3,52 @@ html {
   width: 100%;
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   font-family: sans-serif;
   line-height: 1.4;
 }
 
 /* PARENT CONTAINERS */
-article{
+article {
   width: 825px;
   margin: 50px auto;
   border: 5px solid black;
   /* display: inline-block; */
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  column-gap: 40px;
 }
 
-.prod-cont{
+/* .prod-cont{
   display: flex;
   align-items: flex-start;
-  /* justify-content: space-between; */
+ 
   gap: 40px;
-}
+} */
 
 
-.prod-details{
+.prod-details {
   flex: 1;
 }
 
-.prod-info{
+.prod-info {
   flex: 1;
 }
 
-.priceXshipping{
+.priceXshipping {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
 }
 
-.colors{
+.colors {
   display: flex;
   gap: 10px;
 }
@@ -53,14 +56,15 @@ article{
 /* Child Elements */
 
 
-.content-title{
+.content-title {
   text-align: center;
   text-transform: uppercase;
   padding: 12px 24px;
   position: relative;
+  grid-column: 1/-1;
 }
 
-.content-title::before{
+.content-title::before {
   content: 'sale';
   text-transform: uppercase;
   position: absolute;
@@ -73,75 +77,77 @@ article{
   color: white;
 }
 
-.price{
+.price {
   font-weight: bold;
   font-size: 24px;
 }
 
-.shipping{
+.shipping {
   font-size: 12px;
   text-transform: uppercase;
   color: #777;
   font-weight: bold;
 }
 
-.description{
+.description {
   margin-bottom: 15px;
   font-size: 16px;
 }
 
-.more-info:link, .more-info:visited{
+.more-info:link,
+.more-info:visited {
   color: black;
   margin-bottom: 40px;
   display: inline-block;
 }
 
-.more-info:hover, .more-info:active{
+.more-info:hover,
+.more-info:active {
   color: tomato;
   text-decoration: none;
 }
 
-.color{
+.color {
   height: 22px;
   width: 22px;
   background: black;
 }
 
-.color-blue{
+.color-blue {
   background: blue;
 }
 
-.color-red{
+.color-red {
   background: red;
 }
 
-.color-yellow{
+.color-yellow {
   background: yellow;
 }
 
-.color-green{
+.color-green {
   background: green;
 }
 
-.color-brown{
+.color-brown {
   background: brown;
 }
 
-.det-header{
+.det-header {
   font-size: 20px;
   margin-bottom: 15px;
 }
 
-.det-list{
+.det-list {
   list-style-type: square;
 }
 
-.det-list li{
+.det-list li {
   margin-bottom: 15px;
   font-size: 18px;
 }
 
-.add-cart{
+.add-cart {
   text-transform: uppercase;
   width: 100%;
   text-align: center;
@@ -150,9 +156,10 @@ article{
   color: white;
   padding: 15px;
   border: 0;
+  grid-column: 1/-1;
 }
 
-.add-cart:hover{
+.add-cart:hover {
   color: black;
   background-color: white;
   border-top: 5px solid black;
